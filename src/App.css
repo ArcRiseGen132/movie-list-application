@@ -1,21 +1,22 @@
 body {
   background-color: rgb(34, 34, 30);
-  color: aliceblue;
+  color: rgb(196, 202, 207);
 }
 
-.movie-app > .row {
-  overflow-x: auto;
-  flex-wrap: nowrap;
+.row {
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.image-container {
+/* Add to favorites button */
+.image-container { 
+  display: grid;
   position: relative;
   transition: transforrm 0.2s;
 }
 
 .image-container:hover {
   cursor: pointer;
-  transform: scale(1.1);
 }
 
 .image-container:hover .overlay {
@@ -32,4 +33,8 @@ body {
   font-size: 20px;
   padding: 20px;
   text-align: center;
+}
+
+img {
+  margin-bottom: 12px;
 }
