@@ -37,6 +37,8 @@ function App() {
     const newFavoriteList = [...favorites, movie];
     setFavorites(newFavoriteList);
     saveToLocalStorage(newFavoriteList);
+    console.log(newFavoriteList);
+    console.log(movie)
   };
 
   const removeFavoriteMovie = (movie) => {
