@@ -33,12 +33,22 @@ function App() {
     getMovieRequest(searchTerm);
   }, [searchTerm]);
 
+  useEffect(() => {
+    const movieFavourites = JSON.parse(
+      localStorage.getItem("movie-list-application-favorites")
+    );
+
+    if (movieFavourites) {
+      setFavorites(movieFavourites);
+    }
+  }, []);
+
   const AddFavoriteMovie = (movie) => {
     const newFavoriteList = [...favorites, movie];
     setFavorites(newFavoriteList);
     saveToLocalStorage(newFavoriteList);
     console.log(newFavoriteList);
-    console.log(movie)
+    console.log(movie);
   };
 
   const removeFavoriteMovie = (movie) => {

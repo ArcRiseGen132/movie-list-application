@@ -4,16 +4,16 @@ const API_KEY = process.env.REACT_APP_API_KEY;
 const MovieList = ({ movies, favoriteComponent, handleFavorites }) => {
   const FavoriteComponent = favoriteComponent;
 
-  const fetchPlot = function(movie){
-    fetch(`http://www.omdbapi.com/?t=${movie.Title}&apikey=${API_KEY}`).then(
-      (response) => response.json().then((data) => console.log(data))
-    );
-    return (
-      <div>
-        {movie.Plot}
-      </div>
-    )
-  }
+  // const fetchPlot = function(movie){
+  //   fetch(`http://www.omdbapi.com/?t=${movie.Title}&apikey=${API_KEY}`).then(
+  //     (response) => response.json().then((data) => console.log(data))
+  //   );
+  //   return (
+  //     <div>
+  //       {movie.Plot}
+  //     </div>
+  //   )
+  // }
 
   return (
     <div className="container">
